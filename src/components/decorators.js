@@ -23,7 +23,7 @@ const Toggle = (props) => {
     let midHeight = height * 0.5;
     let points = `0,0 0,${height} ${width},${midHeight}`;
     return (
-        <div style={style.base}>
+        <div style={style.base} onClick={props.onClick}>
             <div style={style.wrapper}>
                 <svg height={height} width={width}>
                     <polygon
@@ -37,7 +37,8 @@ const Toggle = (props) => {
 };
 
 Toggle.propTypes = {
-    style: React.PropTypes.object
+    style: React.PropTypes.object,
+    onClick: React.PropTypes.func.isRequired
 };
 
 const Header = (props) => {

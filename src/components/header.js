@@ -47,6 +47,7 @@ NodeHeader.propTypes = {
         React.PropTypes.bool
     ]).isRequired,
     node: React.PropTypes.object.isRequired,
+    onToggle: React.PropTypes.func,
     onClick: React.PropTypes.func
 };
 
